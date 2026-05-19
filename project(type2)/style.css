@@ -26,7 +26,9 @@ body {
 /* ── NAV ── */
 nav {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -89,9 +91,12 @@ nav {
   height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
-  align-items: center;      /* 가로 중앙 */
-  justify-content: center;   /* 세로 중앙 */
-  text-align: center;        /* 텍스트 중앙 */
+  align-items: center;
+  /* 가로 중앙 */
+  justify-content: center;
+  /* 세로 중앙 */
+  text-align: center;
+  /* 텍스트 중앙 */
   padding: 0 5%;
   overflow: hidden;
 }
@@ -118,7 +123,8 @@ nav {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;      /* 내부 요소 모두 중앙 정렬 */
+  align-items: center;
+  /* 내부 요소 모두 중앙 정렬 */
   width: 100%;
   max-width: 800px;
 }
@@ -150,13 +156,14 @@ nav {
 }
 
 .hero-sub {
-  font-size: clamp(14px, 2vw, 18px);
+  font-size: clamp(16px, 2.5vw, 20px);
   color: var(--gray);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.8;
   margin-bottom: 48px;
   max-width: 520px;
-  word-break: keep-all;    /* 한글 줄바꿈 예쁘게 */
+  word-break: keep-all;
+  /* 한글 줄바꿈 예쁘게 */
 }
 
 .hero-btns {
@@ -167,7 +174,8 @@ nav {
   width: 100%;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   font-family: var(--font);
   font-size: 15px;
   padding: 16px 36px;
@@ -219,8 +227,9 @@ nav {
   border-radius: 16px;
   padding: 32px;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); /* 등장 transition */
-  
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  /* 등장 transition */
+
   /* 등장 전 초기 상태 */
   opacity: 0;
   transform: translateY(50px);
@@ -261,8 +270,16 @@ nav {
   margin-bottom: 32px;
 }
 
-.page-header h2 { font-size: 32px; font-weight: 900; }
-.page-header p { color: var(--gray); margin-top: 8px; font-size: 14px; }
+.page-header h2 {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.page-header p {
+  color: var(--gray);
+  margin-top: 8px;
+  font-size: 14px;
+}
 
 .tabs {
   display: flex;
@@ -308,7 +325,7 @@ nav {
 
 .workout-thumb {
   width: 100%;
-  height: 180px;
+  height: 260px;
   background: #1a2535;
   overflow: hidden;
 }
@@ -319,10 +336,22 @@ nav {
   object-fit: cover;
 }
 
-.workout-body { padding: 20px; }
-.workout-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+.workout-body {
+  padding: 20px;
+}
 
-.workout-meta { display: flex; gap: 10px; margin-bottom: 12px; }
+.workout-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.workout-meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
 .tag {
   font-size: 11px;
   padding: 3px 10px;
@@ -338,16 +367,32 @@ nav {
   transition: max-height 0.4s ease;
 }
 
-.accordion.open { max-height: 500px; }
+.accordion.open {
+  max-height: 500px;
+}
+
 .accordion-inner {
   padding: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(0, 0, 0, 0.2);
 }
 
-.accordion-section { margin-bottom: 16px; }
-.accordion-label { font-size: 11px; font-weight: 700; color: var(--teal); margin-bottom: 6px; }
-.accordion-text { font-size: 13px; color: var(--gray); line-height: 1.7; }
+.accordion-section {
+  margin-bottom: 16px;
+}
+
+.accordion-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+
+.accordion-text {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.7;
+}
 
 /* 유튜브 영상 링크 버튼 */
 .video-btn {
@@ -386,8 +431,18 @@ nav {
   padding: 32px;
 }
 
-.cal-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
-.cal-title { font-size: 22px; font-weight: 900; }
+.cal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.cal-title {
+  font-size: 22px;
+  font-weight: 900;
+}
+
 .cal-arrow {
   width: 42px;
   height: 42px;
@@ -411,24 +466,76 @@ nav {
   transform: translateY(-1px);
 }
 
-.cal-weekdays { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; margin-bottom: 8px;}
-.cal-weekdays span { font-size: 12px; font-weight: 700; color: var(--gray); }
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  text-align: center;
+  margin-bottom: 8px;
+}
 
-.cal-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.cal-weekdays span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gray);
+}
+
+.cal-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
 .cal-day {
+  position: relative;
   aspect-ratio: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 12px;
   cursor: pointer;
   font-size: 14px;
   transition: all 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px;
+  overflow: hidden;
 }
 
-.cal-day.today { color: var(--teal); font-weight: 700; border: 1px solid var(--teal); }
-.cal-day.stamped { background: var(--teal); color: #111; font-weight: 900; }
-.cal-day.selected { background: rgba(0, 173, 181, 0.15); }
+.cal-day-memo {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.cal-day.stamped .cal-day-memo {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.cal-day.today {
+  color: var(--teal);
+  font-weight: 700;
+  border: 1px solid var(--teal);
+}
+
+.cal-day.stamped {
+  background: var(--teal);
+  color: #111;
+  font-weight: 900;
+}
+
+.cal-day.selected {
+  background: rgba(0, 173, 181, 0.15);
+}
 
 /* Memo Panel */
 .memo-card {
@@ -442,7 +549,10 @@ nav {
   top: 80px;
 }
 
-.memo-selected-date { font-size: 20px; font-weight: 900; }
+.memo-selected-date {
+  font-size: 20px;
+  font-weight: 900;
+}
 
 .memo-stamp-btn {
   background: none;
@@ -454,7 +564,10 @@ nav {
   cursor: pointer;
 }
 
-.memo-stamp-btn.stamped { background: var(--teal); color: #111; }
+.memo-stamp-btn.stamped {
+  background: var(--teal);
+  color: #111;
+}
 
 .memo-textarea {
   background: rgba(0, 0, 0, 0.25);
@@ -483,10 +596,19 @@ nav {
   text-align: center;
 }
 
-.streak-count { font-size: 28px; font-weight: 900; color: var(--teal); }
+.streak-count {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--teal);
+}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .calendar-wrap { grid-template-columns: 1fr; }
-  .memo-card { position: static; }
+  .calendar-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .memo-card {
+    position: static;
+  }
 }

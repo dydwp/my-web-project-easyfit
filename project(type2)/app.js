@@ -307,13 +307,18 @@ function renderCalendar() {
     );
     const isStamped = localStorage.getItem('stamp-' + key) === '1';
     const isSelected = selectedDate === key;
+    const memo = localStorage.getItem('memo-' + key);
 
     const classes = ['cal-day'];
     if (isToday) classes.push('today');
     if (isStamped) classes.push('stamped');
     else if (isSelected) classes.push('selected');
 
-    html += `<div class="${classes.join(' ')}" onclick="selectDay('${key}')">${d}</div>`;
+    const memoHtml = memo ? `<div class="cal-day-memo">${memo}</div>` : '';
+    html += `<div class="${classes.join(' ')}" onclick="selectDay('${key}')">
+               <span class="cal-day-num">${d}</span>
+               ${memoHtml}
+             </div>`;
   }
 
   container.innerHTML = html;
@@ -369,6 +374,8 @@ function saveMemo() {
   const btn = document.querySelector('.memo-save-btn');
   btn.textContent = '✅ 저장됨!';
   setTimeout(() => { btn.textContent = '💾 저장하기'; }, 1500);
+
+  renderCalendar();
 }
 
 function updateStreak() {
